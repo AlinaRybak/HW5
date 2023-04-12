@@ -30,9 +30,14 @@ public class QuoteController {
     }
 
     @PostMapping("/quotes")
-    public void postQuotes(@RequestBody @Validated Quote quote){
+    public void postQuote(@RequestBody @Validated Quote quote){
         mapQuotes.put(id++,quote.getQuote());
     }
+
+   /* @PostMapping("/quotes/all")
+    public void postQuotes(@RequestBody @Validated Data message){
+        mapQuotes.putAll(id++, message.getMessage());
+    }*/
 
     @PutMapping ("/quotes/{id}")
     public void updateQuotes(@RequestBody Quote quote, @PathVariable Integer id ){

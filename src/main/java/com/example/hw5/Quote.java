@@ -1,9 +1,10 @@
 package com.example.hw5;
 
 import jakarta.validation.constraints.Size;
+import lombok.Data;
 
+@Data
 public class Quote {
-
     @Size(max=30, message = "Quote must be less 30 chars")
     private String quote;
 
